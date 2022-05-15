@@ -1,0 +1,41 @@
+@import '_iconfons.scss';
+@import '_normalize.scss';
+$bg-color: #e5e5e5;
+$them-color: #64d370;
+$circle-color: #26f03a;
+$blok-txt-color: #f5faff;
+$form-color: #dee6ee;
+$txt-color: #000000;
+
+$font-montserrat: "Montserrat", sans-serif;
+$font-comfortaa: "Comfortaa", cursive;
+
+@mixin white-block-shadow {
+  background: $blok-txt-color;
+  box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+}
+@mixin green-btn-inactive {
+  background: $them-color;
+  box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+  border-radius: 190px;
+  color: $blok-txt-color;
+  font-family: $font-comfortaa;
+  font-weight: 700;
+  font-size: 26px;
+  padding: 14px 69px 11px 68px;
+}
+@mixin green-btn-hover {
+  background: $blok-txt-color;
+  border: 3px solid $them-color;
+  box-shadow: drop-shadow(0px 0px 40px rgba(86, 86, 86, 0.3));
+  color: $them-color;
+}
+@mixin style-h2{
+  font-family: $font-comfortaa;
+  color: $txt-color;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 35.68px;
+}
+

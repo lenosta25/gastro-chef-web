@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="block-alignment">
+    <aside-nav />
+    <main-swiper />
   </div>
+  <advantage-block />
+  <gallery-swiper />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import AsideNav from '../components/AsideNav.vue';
+import MainSwiper from '../components/MainSwiper.vue';
+import AdvantageBlock from '../components/AdvantageBlock.vue';
+import GallerySwiper from '../components/GallerySwiper.vue';
 
 export default {
-  name: 'HomeView',
   components: {
-    HelloWorld
-  }
-}
+    AsideNav,
+    MainSwiper,
+    AdvantageBlock,
+    GallerySwiper,
+  },
+};
 </script>
+
+<style lang="scss" scoped>
+@import "@/assets/style.scss";
+
+.block-alignment {
+  display: flex;
+}
+</style>

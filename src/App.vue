@@ -1,30 +1,51 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="bg-circles">
+    <div class="container-main">
+      <circles-page />
+      <main-header />
+      <router-view />
+    </div>
+    <main-footer />
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import CirclesPage from './components/CirclesPage.vue';
+import MainHeader from './components/MainHeader.vue';
+import MainFooter from './components/MainFooter.vue'
+
+
+export default {
+  name: "App",
+  components: {
+    CirclesPage,
+    MainHeader,
+    MainFooter
+  },
+};
+</script>
+
+<style lang="scss">
+@import "@/assets/style.scss";
+
+.container-main {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 
-nav {
-  padding: 30px;
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+#bg-circles {
+  overflow: hidden;
+  height: 4281px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>
