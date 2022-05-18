@@ -53,7 +53,6 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style.scss";
 h2{
-  @include style-h2;
   padding-top: 120px;
   padding-bottom: 30px;
 }

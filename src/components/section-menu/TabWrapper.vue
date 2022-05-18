@@ -8,7 +8,7 @@
          @click="selectedTitle = title"
 
          >
-            {{ title }}
+            {{ title}}
          </li>
       </ul>
       <slot></slot>
@@ -26,7 +26,7 @@ export default {
          selectedTitle,
          tabTitles,
       }
-   }
+   },
 }
 </script>
 <style lang="scss">

@@ -28,22 +28,8 @@ export default {
 <style lang="scss">
 @import "@/assets/style.scss";
 
-.container-main {
-  position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 50px;
-}
-
-.container {
-  max-width: 1220px;
-  margin: 0 auto;
-}
-
 #bg-circles {
   overflow: hidden;
-  height: 4281px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

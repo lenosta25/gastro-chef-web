@@ -59,8 +59,8 @@
 <style lang="scss" scoped>
 @import "@/assets/style.scss";
 footer {
+  z-index: 2;
   width: 100%;
-  // height: 263px;
   box-shadow: 0px 0px 30px rgba(86, 86, 86, 0.25);
   background: $blok-txt-color;
   margin-bottom: 100px;
