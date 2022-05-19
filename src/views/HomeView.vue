@@ -19,7 +19,7 @@ import AdvantageBlock from "../components/AdvantageBlock.vue";
 import MenuFoodDelivery from "../components/section-menu/MenuFoodDelivery.vue";
 import GallerySwiper from "../components/GallerySwiper.vue";
 import OrderForm from "../components/OrderForm.vue";
-import  AccordionQuestions from "../components/AccordionQuestions.vue";
+import AccordionQuestions from "../components/AccordionQuestions.vue";
 
 export default {
   components: {
@@ -31,7 +31,6 @@ export default {
     OrderForm,
     AccordionQuestions,
   },
-  
 };
 </script>
 

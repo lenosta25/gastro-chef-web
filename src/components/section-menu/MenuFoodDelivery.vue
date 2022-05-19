@@ -1,9 +1,8 @@
 <template>
   <btn-wrapper>
-
     <btn-item title="Программы питания">
       <tab-wrapper>
-        <tab-item title="fitness" >
+        <tab-item title="fitness">
           <div class="main-content">
             <div class="main-content__info">
               <section class="main-content__info-description">
@@ -45,8 +44,68 @@
             </div>
             <div class="main-content__calendar">
               <tab-days-wrapper>
-
-                <tab-day title="ПН">Пн</tab-day>
+                <tab-day title="ПН">
+                  <table class="main-content__calendar-content">
+                    <tr>
+                      <td>
+                        <b>Завтрак</b>
+                        <p>7:00 - 9:00</p>
+                      </td>
+                      <td>- Фриттата с сыром и кабачками</td>
+                      <td>170гр</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <b>2-й завтрак</b>
+                        <p>10:00 - 12:00</p>
+                      </td>
+                      <td>
+                        - Фермерский йогурт
+                        <p>- Полезное печенье из сухофруктов и орехов</p>
+                      </td>
+                      <td>
+                        200гр
+                        <p>2 шт</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <b>Обед</b>
+                        <p>13:00 - 15:00</p>
+                      </td>
+                      <td>
+                        - Люля-кебаб из индейки
+                        <p>- Летний салат с маслинами и сыром</p>
+                      </td>
+                      <td>
+                        100гр
+                        <p>100гр</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <b>Полдник</b>
+                        <p>16:00 - 17:30</p>
+                      </td>
+                      <td>- Творожное суфле с какао и вишей</td>
+                      <td>100гр</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <b>Ужин</b>
+                        <p>19:00 - 20:00</p>
+                      </td>
+                      <td>
+                        - Рыбный терен
+                        <p>- Овощи гриль</p>
+                      </td>
+                      <td>
+                        100гр
+                        <p>150гр</p>
+                      </td>
+                    </tr>
+                  </table>
+                </tab-day>
                 <tab-day title="ВТ">Вт</tab-day>
                 <tab-day title="СР">Ср</tab-day>
                 <tab-day title="ЧТ">Чт</tab-day>
@@ -55,7 +114,7 @@
                 <tab-day title="ВС">Вс</tab-day>
               </tab-days-wrapper>
             </div>
-          </div> 
+          </div>
         </tab-item>
 
         <tab-item title="slim">slim</tab-item>
@@ -91,11 +150,8 @@ export default {
     TabWrapper,
     TabItem,
     TabDaysWrapper,
-    TabDay, 
-
-    
+    TabDay,
   },
-  
 };
 </script>
 
@@ -162,6 +218,26 @@ export default {
       @include green-btn-hover;
     }
   }
+  &__calendar {
+    &-content {
+      z-index: 2;
+      position: relative;
+      max-width: 780px;
+      background: $blok-txt-color;
+      box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+      border-radius: 30px;
+      padding: 30px 50px 40px 50px;
+      font-family: $font-montserrat;
+font-weight: 300;
+font-size: 17px;
+line-height: 22px;
+      tr{
+        padding-bottom: 50px;
+      }
+      td{
+        padding: 20px;
+      }
+    }
+  }
 }
-
 </style>
