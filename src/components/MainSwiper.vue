@@ -12,11 +12,13 @@
       stopOnLastSlide: true,
       disableOnInteraction: false,
     }"
+    @mouseenter="stopSwip($event)" 
+    @mouseleave="startSwip($event)"
   >
     <swiper-slide>
       <div class="slide">
         <div class="slide__content">
-          <h1>Detox программа – <span> вкусное очищение </span> организма</h1>
+          <h1>Detox программа – <br><span> вкусное очищение </span> организма</h1>
           <p class="slide-txt">8 бутылочек натуральных смузи и фрешей.</p>
           <div class="alignment-row">
             <button class="green-btn">Заказать</button>
@@ -36,7 +38,7 @@
     <swiper-slide>
       <div class="slide">
         <div class="slide__content">
-          <h1>Сервис правильного питания.<span> Худей быстро!</span></h1>
+          <h1>Сервис правильного питания.<span><br> Худей быстро!</span></h1>
           <div class="alignment-row">
             <button class="green-btn">Заказать</button>
             <div class="alignment-col">
@@ -52,7 +54,7 @@
       <div class="slide">
         <div class="slide__content">
           <h1>
-            <span>Доверьтесь профессионалам.</span>Я Кобылинский Кирилл -
+            <span>Доверьтесь профессионалам.</span><br> Я Кобылинский Кирилл -
             основатель.
           </h1>
           <p class="slide-txt">
@@ -61,7 +63,6 @@
           </p>
           <div class="alignment-row">
             <button class="green-btn">Мой инстаграм</button>
-            <p class="slide-txt">Всегда открыт для клиентов</p>
           </div>
         </div>
         <img src="@/assets/img/header-swiper-third.png" alt="man" />
@@ -71,7 +72,7 @@
       <div class="slide">
         <div class="slide__content">
           <h1>
-            Кето питание - <span>вкусное и экстремальное </span> быстрое
+            Кето питание - <span>вкусное <br> и экстремальное </span> быстрое
             похудение
           </h1>
           <p class="slide-txt">4 приема пищи.</p>
@@ -109,6 +110,14 @@ export default {
       modules: [Navigation, Pagination, Autoplay, EffectFade],
     };
   },
+  methods: {
+    stopSwip(event) {
+        event.target.swiper.autoplay.stop();
+    },
+    startSwip(event) {
+        event.target.swiper.autoplay.start();
+    },
+  }, 
 };
 </script>
 
@@ -169,5 +178,35 @@ export default {
     border: 31px solid $blok-txt-color;
   }
 }
+@media (max-width:1800px) {
+  img{
+    width: 600px;
+  }
+}
+@media (max-width:1635px) {
+  img{
+    width: 580px;
+  }
+  .slide__content h1{
+    font-size: 36px;
+    line-height: 39px;
+  }
+}
+// @media (max-width:1500px) {
+//   img{
+//     width: 500px;
+//   }
+//   h1{
+//     font-size: 30px;
+//   }
+//   .green-btn{
+//     font-size: 20px;
+//   }
+// }
+// @media (max-width:1420px) {
+//   img{
+//     width: 450px;
+//   }
+// }
 
 </style>

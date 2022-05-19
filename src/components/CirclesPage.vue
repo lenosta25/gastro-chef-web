@@ -117,4 +117,15 @@ export default {
     border: 30px solid $circle-color;
   }
 }
+
+@media (max-width:1760px) {
+ .circle-first{
+    left: 949px;
+  }
+}
+@media (max-width:1600px) {
+ .circle-first{
+    left: 848px;
+  }
+}
 </style>

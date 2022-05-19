@@ -54,7 +54,8 @@
   </footer>
 </template>
 
-<script></script>
+<script>
+</script>
 
 <style lang="scss" scoped>
 @import "@/assets/style.scss";

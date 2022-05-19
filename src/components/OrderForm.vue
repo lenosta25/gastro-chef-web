@@ -16,7 +16,7 @@
         id="tel"
         v-model.trim="form.tel"
         pattern="^[+][0-9]{3} [0-9]{2} [0-9]{3} [0-9]{4}$"
-        placeholder="+380(__) ___-____"
+        placeholder="+380 __ ___ ____"
         required
       />
     </div>
@@ -53,14 +53,12 @@
           v-model="form.agreeCooperation"
         />
         <span class="fake"></span>
-        Согласен с<a class="link" href="#">условиями сотрудничества</a>
+        Согласен с<a class="link" href="#"> условиями сотрудничества</a>
       </label>
     </div>
-
     <button class="form__btn" type="submit">Оформить заказ</button>
   </form>
 </template>
-
 <script>
 export default {
   data() {
@@ -121,13 +119,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/style.scss";
-
 .form {
   display: flex;
   flex-direction: column;
   max-width: 418px;
   z-index: 2;
-
   p {
     text-align: center;
     font-family: $font-montserrat;
@@ -136,12 +132,10 @@ export default {
     line-height: 20px;
     padding-bottom: 30px;
   }
-
   &__grup {
     display: flex;
     flex-direction: column;
     padding-bottom: 30px;
-
     label {
       padding-left: 20px;
       padding-bottom: 5px;
@@ -150,7 +144,6 @@ export default {
       color: $them-color;
       font-size: 18px;
     }
-
     input,
     select {
       background: $form-color;
@@ -161,7 +154,6 @@ export default {
       padding: 10px 20px 9px 20px;
     }
   }
-
   &__checkbox {
     padding-bottom: 20px;
     &-input {
@@ -198,13 +190,13 @@ export default {
       color: $txt-color;
       font-size: 16px;
       padding-left: 20px;
+      cursor: pointer;
 
       .link {
         color: $them-color;
       }
     }
   }
-
   &__btn {
     margin-top: 12px;
     @include green-btn-inactive;

@@ -50,7 +50,7 @@
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  margin-top: 144px ;
+  margin-top: 85px ;
   margin-bottom: 100px;
   position: relative;
   background: $blok-txt-color;

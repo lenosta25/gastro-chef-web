@@ -12,7 +12,10 @@
         <a class="link" href="#">Заказать</a>
         <router-link to="/blog" class="link">Блог</router-link>
       </nav>
-      <a class="header__blok-number" href="tel:+38(068)949-49-19">+38 (068) 949-49-19</a>
+      <a class="header__blok-number" href="tel:+38(068)949-49-19">
+        <span>+38 (068) 949-49-19</span>
+        <i class="icon-phone"></i>
+      </a>
     </div>
   </header>
 </template>
@@ -51,17 +54,18 @@ export default {
   &__blok {
     display: flex;
     justify-content: space-between;
-    width: 956px;
-    position: absolute;
     z-index: 1;
     left: 240px;
     top: 98px;
+    div {
+      padding-left: 50px;
+    }
     &-nav {
       @include white-block-shadow;
       border-radius: 0 190px 190px 0;
       padding: 17px 0;
       .link:first-child {
-        padding-left: 57px;
+        padding-left: 26px;
       }
       .link {
         padding: 0px 20px;
@@ -82,6 +86,7 @@ export default {
     }
 
     &-number {
+      margin-left: 10px;
       width: 280px;
       @include white-block-shadow;
       border-radius: 190px;
@@ -91,6 +96,9 @@ export default {
       padding: 14px 30px;
       color: $them-color;
       transition: all 0.3s ease-out;
+      .icon-phone {
+        display: none;
+      }
     }
 
     &-number:hover {
@@ -99,6 +107,42 @@ export default {
       border: 3px solid $blok-txt-color;
       padding: 12px 28px;
       box-shadow: drop-shadow(0px 0px 40px rgba(86, 86, 86, 0.3));
+    }
+  }
+}
+@media (max-width: 1266px) {
+  .header {
+    &__blok {
+      &-nav {
+        padding: 24px 0;
+      }
+      &-number {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+        span {
+          display: none;
+        }
+        .icon-phone {
+          padding-top: 30%;
+          display: block;
+          text-align: center;
+        }
+      }
+      &-number:hover {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .header {
+    &__blok {
+      justify-content: end;
+      
     }
   }
 }
